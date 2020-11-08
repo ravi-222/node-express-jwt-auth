@@ -24,7 +24,7 @@ app.use(authRoutes);
 
 app.get('/set-cookies',(req,res) => {
   res.setHeader('set-Cookie', 'newUser=true');
-  res.send('coookkiiieeee!!!');
+  res.send('coookkiiieeeesss!!!');
 })
 
 app.get('/read-cookies', (req,res) => {
