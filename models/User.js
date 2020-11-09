@@ -32,7 +32,7 @@ userSchema.statics.login = async function(email, password){
     if(auth){
       return user;
     }
-    throw Error('incorrect passwrd');
+    throw Error('incorrect password');
   }
   throw Error('incorrect email')
 }
