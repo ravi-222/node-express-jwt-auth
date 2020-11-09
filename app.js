@@ -21,15 +21,3 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 app.get('/', (req, res) => res.render('home'));
 app.get('/smoothies', (req, res) => res.render('smoothies'));
 app.use(authRoutes);
-
-app.get('/set-cookies',(req,res) => {
-  // res.setHeader('set-Cookie', 'newUser=true');
-  res.cookie('newUser', false);
-  res.cookie('isWorking', true);
-  res.send('coookkiiieeeesss!!!');
-})
-
-app.get('/read-cookies', (req,res) => {
-  const cookies = req.cookies;
-  res.json(cookies);
-})
